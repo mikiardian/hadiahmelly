@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotiFly</title>
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobileview.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <script src="index.js" defer></script>
+    <script src="swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/effd3867de.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <!-- bottom nav bar -->
+        <nav>
+            <div class="navIcons">
+                <div class="icon">
+                    <a href="#"><i class="fa-solid fa-house"></i></a>
+                    <p>Home</p>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <p>Search</p>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fa-solid fa-star"></i></a>
+                    <p>Favorites</p>
+                </div>
+                <div class="icon">
+                    <a href="account.html"><i class="fa-solid fa-user"></i></a>
+                    <p>Account</p>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Music Player  -->
+        <div class="musicPlayer">
+            <div class="musicImg">
+                <img class="audioImg" src="">
+            </div>
+            <div class="musicDetails">
+                <div class="titleDetails">
+                    <p class="musicTitle"></p>
+                    <p class="bandname"></p>
+                </div>
+                <div class="musicBtns">
+                    <audio id="audio" src=""></audio>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <div class="playpause">
+                        <i id="play" class="fa-solid fa-play"></i>
+                        <i id="pause" class="fa-solid fa-pause hide"></i>
+                    </div>
+                    <i class="fa-solid fa-forward-step"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Bar  -->
+        <div class="searchContainer">
+            <i class="fa-solid fa-xmark"></i>
+            <input type="text" placeholder="Search">
+            <div class="searchHistory">
+                <p class="recentSearch">Recent Searches:</p>
+                <div class="recents">
+                    <p>Narda</p>
+                    <p>Superman</p>
+                </div>
+                <p class="recentSearch">Suggested:</p>
+                <div class="recents">
+                    <p>Jopay</p>
+                    <p>Kamusta kana?</p>
+                    <p>Buti ka pa</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main content -->
+        <div class="mainContainer">
+            <div class="header">
+                <div class="logo">
+                    SpotiFly
+                </div>
+                <div>
+                    <a href="#"><i class="fa-regular fa-bell"></i></a>
+                    <a href="#"><i class="fa-solid fa-gear"></i></a>
+                </div>
+            </div>
+            <div class="topLinks">
+                <div class="musicLink">Music</div>
+                <div class="podcastLink">Podcast & Shows</div>
+            </div>
+
+            <!-- first section -->
+            <div class="gridContainer">
+                <div class="grid">
+                    <img src="images/alapaap.png">
+                    <div class="clipTitle">
+                        <p>Eraserheads</p>
+                    </div>
+                </div>
+                <div class="grid">
+                    <img src="images/jopay.png">
+                    <div class="clipTitle">
+                        <p>Mayonnaise</p>
+                    </div>
+                </div>
+                <div class="grid">
+                    <img src="images/parokya.png">
+                    <div class="clipTitle">
+                        <p>Parokya ni Edgar</p>
+                    </div>
+                </div>
+                <div class="grid">
+                    <img src="images/tagpuan.png">
+                    <div class="clipTitle">
+                        <p>Kamikazee</p>
+                    </div>
+                </div>
+                <div class="grid">
+                    <img src="images/beer.png">
+                    <div class="clipTitle">
+                        <p>The Itchyworms</p>
+                    </div>
+                </div>
+                <div class="grid">
+                    <img src="images/kisapmata.png">
+                    <div class="clipTitle">
+                        <p>Rivermaya</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recently Played -->
+            <div class="showContainer">
+                <p class="showText">Recently Played</p>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/jopay.png" onclick="songChoice(0)">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">Jopay</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/parokya.png" onclick="songChoice(1)">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">Halaga</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/alapaap.png" onclick="songChoice(2)">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">Alapaap</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/tagpuan.png" onclick="songChoice(3)">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">Tagpuan</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/kisapmata.png" onclick="songChoice(4)">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">Kisapmata</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/beer.png" onclick="songChoice(5)">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">Beer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- todays hits -->
+            <div class="showContainer">
+                <p class="showText">Today's biggest hits</p>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/7good.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">7 Good Minutes Daily</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/scrimbapodcast.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">The Scrimba Podcast</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/mindsetmentor.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">The Mindset Mentor</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/payamaninsider.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">Payaman Insider</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/rich dad.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">Rich Dad, Poor Dad</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/ppPodcast.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">Pampamilya Podcast</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Your Shows -->
+            <div class="showContainer">
+                <p class="showText">Your Shows</p>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/7good.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">7 Good Minutes Daily</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/scrimbapodcast.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">The Scrimba Podcast</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/mindsetmentor.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">The Mindset Mentor</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/payamaninsider.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">Payaman Insider</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/rich dad.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">Rich Dad, Poor Dad</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/ppPodcast.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">Pampamilya Podcast</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
