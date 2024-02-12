@@ -27,6 +27,8 @@ genText.addEventListener("click", function() {
     "akuuu gamauu kamuuu di deketin cowo lainnnnnn",
     "maafinn sama sifatkuu yang cemburuann ini yaa sayangggg",
     "akuuu skrngg selaluu ngerasaaa senengg, bisa ketawa ketawaa",
+    "maafin kalau aku orgnyaa cemburuan bgttt yaaaaa",
+    "aku harap kamu masih betah dan mau samaa akuuuu",
     "pokonyaa lovee bgtt sayangg, aku sayangg bgtt sama kamuuuu sayangkuu cintakku cantikkuuuuuu",
   ]
   const textEl = document.querySelector(".textMessage")
